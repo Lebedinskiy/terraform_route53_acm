@@ -9,7 +9,7 @@ This terraform file will creates (CNAME record) subdomain named book using aws r
 
 
 
-```
+``` main.tf
 # Configure the AWS Provider
 provider "aws" {
   region            = var.aws_region
