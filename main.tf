@@ -1,14 +1,3 @@
-This terraform file will creates (CNAME record) subdomain named book using aws route 53 and make request certificate using
- AWS Certificate Manager with new name (book), write new CNAME record for certificate.
-
-
-
-
-
-
-
-
-
 # Configure the AWS Provider
 provider "aws" {
   region            = var.aws_region
@@ -59,13 +48,3 @@ resource "aws_route53_record" "cert_validation" {
 #  validation_record_fqdns = [aws_route53_record.cert_validation.fqdn]
 #}
 ###########################################################################
-
-
-
-
-
-
-Conclusion: You just need to change variables.tf file with your data.
-
-
-
