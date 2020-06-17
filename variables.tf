@@ -29,7 +29,7 @@ variable "domain_name" {
 
 }
 
-variable "set_name" {
+variable "subdomain" {
   type        = string
   default     = "book"                         # This place need to be changed
 
