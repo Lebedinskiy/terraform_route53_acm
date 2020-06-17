@@ -11,6 +11,8 @@ This terraform file will creates (CNAME record) subdomain named book using aws r
   example for linux:
 
  $  wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+
+
  $  unzip terraform_0.12.26_linux_amd64.zip
 
     Move terraform to /usr/local/bin/terraform with next command:
