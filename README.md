@@ -4,14 +4,17 @@ This terraform file will creates (CNAME record) subdomain named book using aws r
  AWS Certificate Manager with new name (book), write new CNAME record for certificate.
 
 1. Install terraform:
- - Visit https://www.terraform.io/downloads.html to choose you OS and download terraform package
-   example for linux:
+ - Visit https://www.terraform.io/downloads.html to choose you OS and download terraform package 
+ 
+  
+  
+  example for linux:
 
  $  wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
  $  unzip terraform_0.12.26_linux_amd64.zip
 
     Move terraform to /usr/local/bin/terraform with next command:
- $  cp terraform /usr/local/bin/terraform
+ $  mv terraform /usr/local/bin/terraform
 
     You can check terraform version
  $  terraform -v
@@ -20,9 +23,11 @@ This terraform file will creates (CNAME record) subdomain named book using aws r
 
 2. Export AWS credential:
 
-   export AWS_ACCESS_KEY_ID=your-access-key
-   export AWS_SECRET_ACCESS_KEY=your-secret-key
-   export AWS_DEFAULT_REGION=your-region
+ $ export AWS_ACCESS_KEY_ID=your-access-key
+   
+ $ export AWS_SECRET_ACCESS_KEY=your-secret-key
+   
+ $ export AWS_DEFAULT_REGION=your-region
 
    NOTE: This user must have read/write access for Route 53 and AWS Certificate Manager.
 
@@ -30,9 +35,17 @@ This terraform file will creates (CNAME record) subdomain named book using aws r
 
 4. Follow to next commands to launch terraform:
 
- $  terrafom init   ''' # Terraform initialization '''
- $  terraform plan  ''' # You will see what terraform will create '''
- $  terraform apply ''' # Apply your plan and create infrastructure '''
+ $  terrafom init 
+ 
+ > Terraform initialization
+ 
+ $  terraform plan 
+ 
+ > You will see what terraform will create
+ 
+ $  terraform apply
+ 
+ > Apply your plan and create infrastructure 
 
     After command terraform apply you will able to see all changes at AWS сonsole
 
