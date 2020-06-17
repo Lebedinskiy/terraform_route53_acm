@@ -20,14 +20,14 @@ weighted_routing_policy {
     weight          = 10
   }
 
-  set_identifier    = var.set_name
-  records           = ["${var.set_name}.${var.domain_name}"]
+  set_identifier    = var.subdomain
+  records           = ["${var.subdomain}.${var.domain_name}"]
 }
 
 
 # ----- This creates an SSL certificate-----
 resource "aws_acm_certificate" "cert" {
-  domain_name       = "${var.set_name}.${var.domain_name}"
+  domain_name       = "${var.subdomain}.${var.domain_name}"
   validation_method = "DNS"
 }
 
